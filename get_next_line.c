@@ -6,13 +6,16 @@
 /*   By: chaeeunkim <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 15:22:27 by chaeeunkim        #+#    #+#             */
-/*   Updated: 2021/02/20 16:36:54 by chaeeunki        ###   ########.fr       */
+/*   Updated: 2021/02/20 16:50:40 by chaeeunki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+
+
+
 int		get_next_line(int fd, char **line)
 {
-
+	
 }
