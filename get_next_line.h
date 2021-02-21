@@ -6,7 +6,7 @@
 /*   By: chaeeunkim <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 15:22:54 by chaeeunkim        #+#    #+#             */
-/*   Updated: 2021/02/20 16:48:27 by chaeekim         ###   ########.fr       */
+/*   Updated: 2021/02/21 15:06:15 by chaeekim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@
 
 int		get_next_line(int fd, char **line);
 
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
-size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 char	*ft_strdup(char *s1);
 char	*ft_strjoin(char *s1, char *s2);
+void	ft_strdel(char **s);
+char	*ft_strchr(const char *s, int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

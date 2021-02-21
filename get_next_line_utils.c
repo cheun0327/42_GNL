@@ -5,64 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chaeeunkim <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/20 15:24:12 by chaeeunkim        #+#    #+#             */
-/*   Updated: 2021/02/20 16:55:05 by chaeeunki        ###   ########.fr       */
+/*   Created: 2021/02/20 15:24:12 by chaeekim          #+#    #+#             */
+/*   Updated: 2021/02/21 15:05:55 by chaeekim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-size_t		ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-size_t		ft_strlcpy(char *dest, const char *src, size_t dstsize)
-{
-	size_t		srclen;
-	size_t		i;
-
-	srclen = 0;
-	if (dest == NULL || src == NULL)
-		return (0);
-	while (src[srclen] != 0)
-		srclen++;
-	if (dstsize == 0)
-		return (srclen);
-	i = 0;
-	while (src[i] && i < (dstsize - 1))
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = 0;
-	return (srclen);
-}
-
-size_t		ft_strlcat(char *dest, const char *src, size_t dstsize)
-{
-	size_t i;
-	size_t destlen;
-	size_t srclen;
-
-	i = 0;
-	destlen = ft_strlen(dest);
-	srclen = ft_strlen(src);
-	if (dstsize <= destlen)
-		return (dstsize + srclen);
-	while (src[i] && destlen + i + 1 < dstsize)
-	{
-		dest[destlen + i] = src[i];
-		i++;
-	}
-	dest[destlen + i] = 0;
-	return (destlen + srclen);
-}
 
 char		*ft_strdup(const char *s1)
 {
@@ -104,4 +52,43 @@ char		*ft_strjoin(char const *s1, char const *s2)
 		ptr[i++] = *s2++;
 	ptr[i] = 0;
 	return (ptr);
+}
+
+void		ft_strdel(char **s)
+{
+	if (s)
+	{
+		free(*s);
+		*s = NULL;
+	}
+}
+
+char		*ft_strchr(const char *s, int c)
+{
+	int		i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	if (c == 0)
+		return ((char *)&s[i]);
+	return (0);
+}
+
+char		*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*str;
+
+	if (s == NULL)
+		return (NULL);
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
+	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	ft_strlcpy(str, s + start, len + 1);
+	return (str);
 }
