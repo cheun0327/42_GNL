@@ -6,7 +6,7 @@
 /*   By: chaeeunkim <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 15:22:27 by chaeekim          #+#    #+#             */
-/*   Updated: 2021/02/21 15:04:01 by chaeekim         ###   ########.fr       */
+/*   Updated: 2021/02/21 15:20:15 by chaeekim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ int		ft_new_line(char **s, char **line, int fd, int ret)
 		free(s[fd]);
 		s[fd] = tmp;
 		if (s[fd][0] == '\0')
-			ft_strdel(&s[fd]);
+			free(&s[fd]);
 	}
 	else if (s[fd][len] == '\0')
 	{
 		if (ret == BUFF_SIZE)
 			return (get_next_line(fd, line));
 		*line = ft_strdup(s[fd]);
-		ft_strdel(&s[fd]);
+		free(&s[fd]);
 	}
 	return (1);
 }

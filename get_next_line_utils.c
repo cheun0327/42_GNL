@@ -6,7 +6,7 @@
 /*   By: chaeeunkim <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 15:24:12 by chaeekim          #+#    #+#             */
-/*   Updated: 2021/02/21 15:05:55 by chaeekim         ###   ########.fr       */
+/*   Updated: 2021/02/21 15:20:12 by chaeekim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,6 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	return (ptr);
 }
 
-void		ft_strdel(char **s)
-{
-	if (s)
-	{
-		free(*s);
-		*s = NULL;
-	}
-}
-
 char		*ft_strchr(const char *s, int c)
 {
 	int		i;
@@ -91,4 +82,19 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
+}
+
+char		*ft_strnew(size_t size)
+{
+	char	*s;
+	size_t	i;
+
+	i = 0;
+	s = (char*)malloc(size + 1);
+	if (s == NULL)
+		return (NULL);
+	while (i < size)
+		s[i++] = 0;
+	s[size] = '\0';
+	return (s);
 }
