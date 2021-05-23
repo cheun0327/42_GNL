@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chaeeunkim <marvin@42.fr>                  +#+  +:+       +#+        */
+/*   By: chaeekim <chaeekim@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/20 15:24:12 by chaeekim          #+#    #+#             */
-/*   Updated: 2021/05/19 13:50:14 by chaeekim         ###   ########.fr       */
+/*   Created: 2021/05/19 13:51:55 by chaeekim          #+#    #+#             */
+/*   Updated: 2021/05/19 13:52:00 by chaeekim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t		ft_strlen(const char *s)
 {
@@ -104,3 +104,4 @@ char		*ft_strdup(char *s1)
 	result[i] = '\0';
 	return (result);
 }
+

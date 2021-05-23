@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chaeeunkim <marvin@42.fr>                  +#+  +:+       +#+        */
+/*   By: chaeekim <chaeekim@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/20 15:22:27 by chaeekim          #+#    #+#             */
-/*   Updated: 2021/05/23 15:41:31 by chaeekim         ###   ########.fr       */
+/*   Created: 2021/05/19 13:50:47 by chaeekim          #+#    #+#             */
+/*   Updated: 2021/05/19 13:50:51 by chaeekim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <stdio.h>
+#include "get_next_line_bonus.h"
 
 int					is_newline(char *backup)
 {
@@ -82,22 +81,4 @@ int					get_next_line(int fd, char **line)
 			return (split_line(&backup[fd], line, cut_idx));
 	}
 	return (return_all(&backup[fd], line, read_size));
-}
-
-int main(void)
-{
-	char *line = 0;
-	int ret;
-	int fd;
-
-	//fd = open("test.txt", O_RDONLY);
-	fd = 0;
-	while ((ret = get_next_line(fd, &line)) > 0)
-	{
-		printf("%s\n", line);
-		free(line);
-	}
-	printf("%s\n", line);
-	free(line);
-	return (0);
 }

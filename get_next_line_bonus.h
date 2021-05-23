@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chaeeunkim <marvin@42.fr>                  +#+  +:+       +#+        */
+/*   By: chaeekim <chaeekim@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/20 15:22:54 by chaeeunkim        #+#    #+#             */
-/*   Updated: 2021/05/19 13:49:13 by chaeekim         ###   ########.fr       */
+/*   Created: 2021/05/19 13:51:03 by chaeekim          #+#    #+#             */
+/*   Updated: 2021/05/19 13:51:19 by chaeekim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <stdlib.h>
 # include <unistd.h>
